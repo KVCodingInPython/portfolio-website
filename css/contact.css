@@ -1,0 +1,122 @@
+/* Style rules for body and headings */
+body {
+    background-color: #131b2f;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+    }
+
+h1 {
+    color: black;
+}
+
+
+
+
+/* Style rules for navbar section */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style-type: none;
+
+}
+
+.nav-container a {
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+
+}
+
+.nav-container a:hover {
+    color: #60A5FA;
+
+}
+
+#navbar {
+    background-color: white;
+    grid-area: nav;
+
+
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+aside h2 {
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* Style rules for contact section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    grid-area: contact;
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
+}
+
+.email_content {
+    display: flex;
+    gap: 2rem;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+.linkedin_content {
+    display: flex;
+    gap: 2rem;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+.github_content {
+    display: flex;
+    gap: 2rem;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+.fa-envelope {
+    height: 2rem;
+    width: 2rem;
+    
+}
+
+/* Style rules for footer section */
+#footer {
+    grid-area: footer;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    padding-top: 16rem;
+}
+
+/* Style rules for grid-layout of page */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'nav'
+                         'welcome'
+                         'contact'
+                         'footer';
+}
+
+

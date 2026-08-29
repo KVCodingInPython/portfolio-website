@@ -1,0 +1,64 @@
+/* Remove list style from list-elements */
+ul, li {
+    list-style-type: none;
+}
+
+/* Reset form elements */
+input, textarea, button {
+    outline: none;
+}
+
+input, textarea, fieldset {
+    border: none;
+}
+
+form {
+    margin: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+footer {
+    margin: 0;
+}
+
+/* Reset aside element */
+
+aside {
+    margin: 0;
+}
+/* Reset image elements */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Reset font weight for heading elements */
+h1, h2, h3 {
+    font-weight: normal;
+
+}
+
+/* Prevents overflow of text on every page */
+p, h1, h2, h3{
+    overflow-wrap: break-word;
+}
+/* Formatting of text spacing within the body */
+body {
+    line-height: 1.5;
+}
+
+/* Allow font-size of root elements to be scalable, improving accessibility */
+html {
+  font-size: 100%;
+}
+
+
+
+
+
+
+

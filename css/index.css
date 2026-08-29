@@ -1,0 +1,154 @@
+/* CSS style rules for whole page + headings */
+body {
+    background-color: #131b2f;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+    }
+
+
+
+h1 {
+    color: black;
+}
+
+/* CSS Style rules for nav elements + section */
+nav, h1 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style-type: none;
+
+}
+
+.nav-container a {
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+
+}
+
+.nav-container a:hover {
+    color: #60A5FA;
+
+}
+
+#navbar {
+    background-color: white;
+    grid-area: nav;
+
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+.welcome aside h2 {
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+ /* CSS for footer section */
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+    
+}
+
+.footer a:hover {
+     color: #60A5FA;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 2rem;
+
+}
+
+
+
+#footer {
+    display: flex;
+    grid-area: footer;
+    margin-top: 33rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+
+}
+
+/* Style rules for About Me section */
+.about_me aside {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+
+}
+
+
+#aboutMe {
+    border: 2px solid lightskyblue;
+    grid-area: about;
+
+}
+
+.about_me p{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
+
+/* Font style for the paragraph element which is a child element of the aside element */
+aside p {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+/* CSS grid layout */
+
+article {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'nav nav'
+                         'welcome welcome'
+                         'about about'
+                         'footer footer';
+    width: 100%;
+}
+
+

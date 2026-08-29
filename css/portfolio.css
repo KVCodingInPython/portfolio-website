@@ -1,0 +1,127 @@
+/* Style rules for body and headings */
+body {
+    background-color: #131b2f;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+     }
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* Style rules for navbar section */
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    background-color: white;
+}
+
+.nav-container h1 {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.nav-container ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.nav-container a{
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+     color: #60A5FA;
+}
+
+#navbar {
+    grid-area: nav;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+aside h2 {
+    color: white;
+    font-weight: bold;
+}
+
+/* Style rules for projects section */
+
+#portfolio {
+    grid-area: projects;
+}
+article .project {
+    display: flex;
+    gap: 2rem;
+}
+
+article .project img {
+    border: 2px  black;
+    padding: 10px;
+    background-color: black;
+}
+
+
+article .project figure{
+    width: 50%;
+    height: 50%;
+    font-size: 0.8rem;
+}
+
+.project-info h2 {
+    text-decoration: underline;
+    text-decoration-color: lightblue;
+    font-weight: bold;
+}
+
+.project-info a {
+    text-decoration: none;
+    color: lightblue;
+    font-style: italic;
+}
+
+.project {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+figcaption a {
+    text-decoration: none;
+    color: lightblue;
+}
+/* Style rule for footer section */
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+    padding-top: 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+
+/* Style rule for grid-layout of page */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'nav'
+                         'welcome'
+                         'projects'
+                         'footer';
+}
+

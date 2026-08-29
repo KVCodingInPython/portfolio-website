@@ -1,0 +1,164 @@
+/* Style rules for body and headings */
+body {
+    background-color: #131b2f;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+    }
+
+nav, h1 {
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+h1 {
+    color: black;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
+/* Style rules for navbar section */
+#navbar {
+    grid-area: nav;
+}
+
+.nav-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    
+}
+
+.nav-container a {
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    color: #60A5FA;;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 2rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+
+}
+
+aside h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+
+/* Style rules for form elements */
+legend {
+    text-align: center;
+}
+
+form {
+    background-color: #1e1e2f;
+    height: 24rem;
+}
+
+#blog_form {
+    margin-top: 5rem;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    padding-top: 40px;
+    grid-area: form;
+}
+
+button {
+    width: 8rem;
+    height: 3rem;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+input {
+    width: 20rem;
+    height: 2rem;
+}
+
+textarea {
+    width: 20rem;
+    height: 6rem;
+    color: black;
+}
+
+input, textarea, button {
+    outline: none;
+}
+
+input, textarea {
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+form {
+    border: none;
+    outline: none;
+}
+
+legend {
+    padding-top: 20px;
+}
+
+button {
+    background-color: #1e1e2f;
+    color: white;
+}
+
+button:hover {
+    background-color: #60A5FA;
+}
+
+/* Style rule for footer section */
+#footer {
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    padding-top: 12rem;
+    grid-area: footer;
+}
+
+#post {
+    grid-area: post;
+    border-top: 2px solid #60A5FA;
+    border-bottom: 2px solid #60A5FA;
+    margin-top: 40px;
+    padding-top: 10px;
+    color: #CBD5E1;
+}
+
+#post h2 {
+    color: #F8FAFC;
+    font-weight: bold;
+}
+/* Style rule for grid-layout of page */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'nav'
+                         'welcome'
+                         'form'
+                         'post'
+                         'footer';
+}

@@ -1,0 +1,118 @@
+/* Style rules for body and headings */
+body {
+    background-color: #131b2f;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+    }
+
+h1 {
+    color: black;
+}
+
+/* Style rules for navbar section */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav-container a {
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+}
+
+#navbar {
+    background-color: white;
+    grid-area: nav;
+}
+
+aside h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+/* Style rules for login form section */
+#loginform {
+    grid-area: form;
+}
+
+fieldset {
+    border: none;
+}
+
+form {
+    text-align: center;
+    background-color: #1e1e2f;
+    width: 500px;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+legend {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    margin-top: 1.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 16rem;
+    height: 1.5rem;
+
+}
+
+button {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #131b2f;
+    color: white;
+}
+
+button:hover {
+    color: #60A5FA;
+}
+
+/* Style rules for footer section */
+#footer {
+    grid-area: footer;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    text-align: center;
+    padding-top: 12rem;
+}
+/* Style rules for grid-layout of login page */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'nav'
+                         'welcome'
+                         'form'
+                         'footer';
+}

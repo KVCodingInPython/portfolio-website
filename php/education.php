@@ -1,0 +1,109 @@
+<?php 
+
+session_start();
+
+$logged_in = isset($_SESSION['email']);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Roboto and Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel = "stylesheet" href = "../css/reset.css"/>
+    <link rel = "stylesheet" href = "../css/education.css"/>
+
+    <!-- Media queries/ responsive scaling for mobile, tablet and desktop/laptop devices-->
+    <link rel = "stylesheet" href = "../css/education-mobile.css" media = "screen and (min-width:320px) and (max-width: 760px)" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <div class = "grid-container">
+            <section id = "nav">
+                <div class = "navbar">
+                    <div class = "nav-container">
+                        <div> <h1> Education </h1> </div>
+                            <nav>
+                                <ul>
+                                    <?php if ($logged_in): ?>
+                                            <div> <li> <a href = "../php/logout.php"> Logout </a> </li> </div>
+                                        <?php else: ?>
+                                            <div> <li> <a href = "../php/login.php"> Login </a> </li> </div>
+                                        <?php endif; ?>
+                                    <div> <li> <a href = "../php/index.php"> Homepage </a> </li> </div>
+                                    <div> <li> <a href = "../php/skills.php"> Skills </a> </li> </div>
+                                    <div> <li> <a href = "../php/portfolio.php"> Portfolio </a> </li> </div>
+                                    <div> <li> <a href = "../php/viewBlog.php"> Blog </a> </li> </div>
+                                    <div> <li> <a href = "../php/contact.php"> Contact </a> </li> </div>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+            </section>
+
+            <div class = "welcome">
+                <?php if ($logged_in): ?>
+                    <aside> <h2> Welcome User </h2> </aside>
+                <?php endif; ?>
+            </div>
+
+            <section id = "Education">
+                <div class = "education">
+                        <div id = "secondary"> <h2> Secondary School Education </h2> </div>
+                        <div id = "school"> GCSEs: 9 in Computer Science, English Language and Mathematics - Wilmington Grammar School for Boys.
+                        <br>
+                        <div id = "alevels"> A-Levels: A* A A, Mathematics, Further Mathematics, Physics - St Olaves Grammar School for Boys. </div>
+                </div>
+                <br>
+            </section>
+            <section id = "higher_education">
+
+                <div class = "higher_education">
+                    <h2> Higher Education </h2>
+                    <br>
+                    <div>Currently reading BSc Computer Science in my 1st year at Queen Mary University of London. </div>
+            </section>
+            <br>
+            <section id = "University">
+                <div class = "University">
+                <h3> 1st Year </h3>
+                            <div class = "Modules">
+                                <div id = "SemA"> Semester A modules: 
+                                <ul>
+                                    <div> <li>Procedural Programming </li> </div>
+                                    <div> <li> Computer Systems and Networks </li> </div>
+                                    <div> <li> Logic and Discrete Structures </li> </div>
+                                    <div> <li> Professional Research Practice </li> </div>
+                                </ul>
+                                </div>
+                                <p>
+                                <div id = "SemB"> Semester B modules:
+                                <ul>
+                                    <div> <li> Object Oriented Programming </li> </div>
+                                    <div> <li> Automata and Formal Languages </li> </div>
+                                    <div> <li> Introduction to Web Technology </li> </div>
+                                    <div> <li> Information Systems Analysis </li> </div>
+                                </ul>
+                                </div>
+                                </p>
+                            </div>
+                </div>
+            </section>
+            
+            <section id = "footer">
+                <footer>
+                    <em> Kaloyan Velikov Copyright @ 2026 </em>
+                </footer>
+            </section>
+        </div>
+    </article>
+    
+</body>
+</html>

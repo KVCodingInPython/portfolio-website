@@ -1,0 +1,151 @@
+/* Overall Styles */
+
+body {
+    background-color: #131b2f;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+/* Navigation Bar */
+
+
+#navbar {
+    background-color: white;
+    grid-area: nav;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+}
+
+.nav-container h1 {
+    color: black;
+}
+
+.nav-container ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.nav-container a {
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+}
+
+.nav-container a:hover {
+    color: #60A5FA;
+}
+
+/* Main Content */
+
+aside h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+#addEntry {
+    grid-area: add-post;
+}
+
+#blog_posts {
+    grid-area: blog-posts;
+}
+
+
+
+
+.blog-post {
+    padding: 1.25rem 0;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+
+.blog-post h2 {
+    margin: 0;
+}
+
+.post-date {
+    color: #CBD5E1;
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: right;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.blog-post p {
+    line-height: 1.7;
+    color: #CBD5E1;
+}
+
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #131b2f;
+    margin-left: 2rem;
+    color: white;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+button:hover {
+    color: #60A5FA;
+}
+
+.blog-post {
+    border-bottom: 2px solid #60A5FA;
+}
+
+.comments {
+    border-top: 2px solid #60A5FA;
+    margin-top: 1.5rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+                   'nav'
+                   'welcome'
+                   'add-post'
+                   'blog-posts';
+}

@@ -1,0 +1,169 @@
+/* Style rule for body and headings */
+body {
+    background-color: #131b2f;
+    color: #F1F5F9;
+    font-family: Arial, sans-serif;
+    }
+/* Style rule for navbar section */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 450;
+
+}
+
+.nav-container h1 {
+    color: black;
+}
+
+.nav-container ul {
+    display: flex;
+    list-style-type: none;
+    gap: 0.5rem;
+}
+
+.nav-container a {
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+}
+
+.nav-container a:hover {
+    color: #60A5FA;
+    animation: pulse 1.5s ease-out;
+}
+
+#navbar {
+    grid-area: nav;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+aside h2 {
+    color: white;
+    font-weight: bold;
+}
+
+/* Style rule for skills section */
+
+#skills_header {
+    grid-area: Skills;
+}
+
+#skills h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+
+.skills {
+    grid-area: Skill1;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+}
+
+.skills li {
+    margin-bottom: 1rem;
+}
+
+#skills {
+    display: flex;
+    gap: 1.5rem;
+   justify-content: space-between;
+}
+
+/* Style rules for progress bars for each skill in skills section */
+
+.bar {
+    background-color: #2c365c;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 8rem;
+
+}
+
+.fill {
+    height: 100%;
+    background-color: #60A5FA;
+
+}
+
+.java {
+    width: 80%;
+}
+
+.python {
+    width: 70%;
+}
+
+.html {
+    width: 60%;
+}
+
+.css {
+    width: 60%;
+}
+
+.sql {
+    width: 80%;
+}
+
+.logic {
+    width: 90%;
+}
+
+.critical {
+    width: 80%;
+}
+
+
+/* Style rule for footer */
+#footer {
+    grid-area: footer;
+    margin-top: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+/* Style rule for grid-layout */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 'nav nav nav'
+                         'welcome welcome welcome'
+                         'Skills Skills Skills'
+                         'Skill1 Skill1 Skill1'
+                         'Skill1 Skill1 Skill1'
+                         'Skill1 Skill1 Skill1'
+                         'footer footer footer';
+}
+
+
+
+
+
+
+
+

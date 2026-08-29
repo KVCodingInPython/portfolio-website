@@ -1,0 +1,156 @@
+/* CSS style rules for whole page and headings */
+
+body {
+    background-color: #131b2f;
+    color: white;
+    font-family: Arial, sans-serif;
+    }
+
+h1 {
+    font-weight: bold;
+    color: black;
+}
+
+h2, h3 {
+    text-decoration: underline;
+}
+
+
+/* CSS style rules for the navbar section */
+nav, h1 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0.75rem 2rem;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+.navbar a:hover {
+    color: #60A5FA;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+aside h2 {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0;
+}
+
+
+
+/* Style rules for Education section */
+
+#Education {
+    grid-area: secondary;
+}
+
+#higher_education {
+    grid-area: higher;
+    border-bottom: 2px solid lightblue;
+    padding-bottom: 2rem;
+}
+
+
+#University {
+    grid-area: modules;
+}
+
+
+#SemA ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+#SemB ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+
+.Modules {
+    display: flex;
+    gap: 2rem;
+
+}
+
+
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    border-bottom: 2px solid lightblue;
+}
+
+/* Style rule for footer */
+#footer {
+    grid-area: footer;
+    text-align: center;
+    padding-top: 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+
+
+/* Style rule for grid layout of education.html page */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 'nav'
+                         'welcome'
+                         'secondary'
+                         'higher'
+                         'modules'
+                         'footer';
+    gap: 2rem;
+    margin: auto;
+}
+
+
+
+
+
+

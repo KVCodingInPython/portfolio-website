@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Roboto, Montserrat fonts 5 - 7 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel = "stylesheet" href = "css/reset.css"/>
+    <link rel = "stylesheet" href = "css/addEntry.css"/>
+
+    <!-- Media queries/ responsive scaling for mobile, tablet and desktop/laptop devices-->
+    <link rel = "stylesheet" href = "css/addEntry-mobile.css" media = "screen and (min-width:320px) and (max-width: 768px)" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <div class = "grid-container">
+            <section id = "navbar">
+                <div class = "nav-container">
+                    <div> <h1> Blog </h1></div>
+                    <nav>
+                        <ul>
+                            <div> <li> <a href = "index.html"> Homepage </a> </li> </div>
+                            <div> <li> <a href = "education.html"> Education </a> </li> </div>
+                            <div> <li> <a href = "skills.html"> Skills </a> </li> </div>
+                            <div> <li> <a href = "portfolio.html"> Portfolio </a> </li> </div>
+                            <div> <li> <a href = "login.html"> Login </a> </li> </div>
+                            <div> <li> <a href = "contact.html"> Contact </a> </li> </div>
+                        </ul>
+            
+                    </nav>
+                </div>
+            </section>
+
+            <section id = "blog_form">
+                <form id = "blogForm" method = "post" action = "php/addPost.php">
+                    <fieldset>
+                        <legend> Add Blog </legend>
+                        <p>
+                        
+                            <br>
+                            <input type = "text" placeholder = "Title" id = "title" name = "title"/>
+                            <br>
+                        
+                            <br>
+                            <textarea name = "content" placeholder = "Enter your text here" id = "text"></textarea>
+                            <br>
+                            <button name = "Submit" type = "submit" value = "Submit" id = "submit">Post</button>
+                            <button name = "Clear" type = "reset" id = "clear"> Clear </button>
+                        </p>
+                    </fieldset>
+                </form>
+                <script src = "js/addEntry.js"> </script>
+            </section>
+
+            <section id = "post">
+                <h2> Applications for Automata and Formal Languages in Compiler Design and Software Verification </h2>
+                <p>
+                     
+
+                    A compiler is software that translates or converts code written in a high-level language 
+                    (Source language) into a low-level language (machine code or Assembly language). Once a 
+                    program is executed, it is preprocessed, validating conditional statements and removing 
+                    comments from the high-level code. Then, it is compiled by the compiler, which ensures 
+                    the code is syntactically and grammatically correct, corresponding to the rules of the high-
+                    level language, as well as detecting errors (compile-time errors) and generating code, 
+                    translating the high-level source code into assembly code. 
+                
+                </p>
+
+                <p>
+                    During the compilation phase, the compiler initially converts the raw source code into a 
+                    sequence of tokens, where a token is the smallest unit in a programming language. The 
+                    lexical analyser analyses the structure of tokens and scans the code character by 
+                    character, recognising and grouping characters into tokens according to lexical rules 
+                    defined by regular expressions. These rules correspond to regular languages, which can be 
+                    represented using a Finite State Automaton (FSA), either deterministic, a DFA, or non-
+                    deterministic, an NFA. In practice, a DFA is most suitable, since for each input symbol, 
+                    there must be at most one outgoing transition to the next state, ensuring efficient and 
+                    deterministic token recognition.  The DFA operates over an alphabet Σ , which consists of
+                    the set of input characters, such as ASCII. The DFA will only accept words in the language if 
+                    and only if the DFA reaches a final state, and if the end of the word has been reached.  
+                    When the DFA reaches a final (accepting) state after consuming a sequence of characters,
+                    it recognises a valid token, which can then be categorised - often using a lookup table – into 
+                    types such as keywords, identifiers, operators, or delimiters. This process prepares the 
+                    token stream for the next stage of compilation, parsing, where the syntactic structure of 
+                    the program is analysed. 
+                </p>
+
+                <p>
+                    Context-free grammars are essential in compilers because they allow for recursive 
+                    definitions of strings, enabling the representation of nested and hierarchical structures in 
+                    programming languages, such as expressions, loops, and function calls. A context-free 
+                    grammar consists of a set of production rules, defined over variables (non-terminals), 
+                    terminals, and a start symbol. The terminals form the alphabet of the language, while the 
+                    production rules describe how valid strings can be generated. A word is accepted in a 
+                    context-free language if and only if it has a derivation from the start symbol and can be 
+                    represented by a valid parse tree. In compilers, CFGs are used during syntax analysis 
+                    (parsing) to determine whether a sequence of tokens conforms to the language’s grammar. 
+                    There are two main approaches to parsing in compilers: top-down and bottom-up parsing.  
+                    In top-down parsing, the parser begins with the start symbol and applies production rules 
+                    to derive the input string, usually using leftmost derivations. This approach constructs the 
+                    parse tree from the root down to the leaves. In contrast, bottom-up parsing starts with the 
+                    input tokens and attempts to reduce them to the start symbol, constructing the parse tree 
+                    from the leaves up to the root. This corresponds to a rightmost derivation in reverse. A 
+                    common bottom-up technique is shift-reduce parsing, where the parser processes input 
+                    from left to right, shifting tokens onto a stack and reducing them using production rules 
+                    when a match is found. Shift-reduce parsing is particularly useful in natural language 
+                    processing to build syntactic structures, such as phrase-structure trees for sentences in 
+                    natural language and in operator-precedence parsers, used in evaluating expressions. The 
+                    level of expressiveness demonstrated by context-free grammar is higher compared to 
+                    regular languages, allowing us to model hierarchical structures which involve recursion, 
+                    such as trees, linked lists, and algorithms used in traversing file systems. 
+                </p>
+
+                <p>
+                    To ensure a parsing method is efficient and accurate, using a bottom-up parser is more 
+                    efficient for complex grammars, since they do not solely rely on whether a grammar is 
+                    either left or right recursive, and can handle grammars without requiring grammar 
+                    transformations. However, top-down parsers require grammar to be free of left recursion, 
+                    and often need left factoring, which can make grammar design more restrictive.   
+                    Furthermore, bottom-up parsers, such as LR parsers, use precomputed parsing tables 
+                    making decisions in constant time per step, making them suitable for programming 
+                    languages with complex and highly nested syntactic structures, such as nested object 
+                    inheritance in the object-oriented paradigm, and deeply nested conditional statements 
+                    used in matrix calculations and combinatoric problems. On the other hand, top-down 
+                    parsers often use recursive procedures during parsing. Although they are simpler to 
+                    implement and understand, they struggle with more complex grammar unless the grammar 
+                    is transformed. Overall, bottom-up parsers are more predictable and scalable for handling 
+                    the full syntax of most high-level languages, whereas top-down parsers are often used in 
+                    simpler or more restricted scenarios.  
+                </p>
+
+                <p>
+                    Beyond compiler design, formal languages have applications for hardware and software 
+                    verification. Software verification involves ensuring that a system behaves according to its 
+                    specification, often by detecting or proving the absence of errors. Regular languages and 
+                    finite state automata are used in modelling simple, deterministic machines with a finite 
+                    number of states, such as vending machines or communication protocols in networks. 
+                    Similarly, in cybersecurity, regular expressions are widely used to detect patterns in 
+                    network traffic, enabling the identification of malicious data and the validation of user 
+                    input. Additionally, formal methods such as model checking use automata to 
+                    systematically verify whether a system satisfies certain specifications. Furthermore, 
+                    modern text editors and Integrated Development Environments (IDEs) rely on formal 
+                    language concepts to provide features such as syntax highlighting, code completion, and 
+                    error detection. These tools primarily use regular and context-free grammar to analyse 
+                    code in real time and assist developers in writing code. Additionally, more complex 
+                    behaviours, such as function calls and recursion, can be modelled using pushdown 
+                    automata, which utilise a stack. This is particularly useful for ensuring correct call-return 
+                    sequences and verifying that nested structures, such as parentheses in expressions, are 
+                    properly balanced. 
+         
+                </p>
+
+            </section>
+            <section id = "footer">
+                <footer>
+                    <em> Kaloyan Velikov Copyright @2026</em>
+                </footer>
+            </section>
+        </div>
+    </article>
+    
+</body>
+</html>
